@@ -38,8 +38,7 @@ phases:
       # - command
   build:
     commands:
-      - mvn test -Dtest=ServiceUnitTest
-      - mvn install
+      - mvn -Dtest=ServiceUnitTest test install
       # - command
       # - command
       #post_build:
