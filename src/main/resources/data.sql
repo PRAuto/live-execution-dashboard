@@ -1,0 +1,4 @@
+Create table Execution (id int auto_increment primary key, execution_id varchar(50), testcase_name varchar(50), execution_status varchar(50), execution_date varchar(50));
+insert into Execution (execution_id, testcase_name, execution_status, execution_date) values ('10001', 'Test Case Name 1001','Pass', '05/05/2022');
+insert into Execution (execution_id, testcase_name, execution_status, execution_date) values ('10002', 'Test Case Name 1001','Fail', '05/04/2022');
+insert into Execution (execution_id, testcase_name, execution_status, execution_date) values ('10003', 'Test Case Name 1001','PAss', '05/03/2022');
