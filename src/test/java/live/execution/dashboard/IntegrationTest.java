@@ -13,14 +13,13 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 
 @SpringBootTest
 @TestMethodOrder(OrderAnnotation.class)
-public class IntegrationTestCases {
+public class IntegrationTest {
 
 
 	@Test @Order(1)
