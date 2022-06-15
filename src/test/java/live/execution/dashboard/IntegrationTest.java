@@ -32,16 +32,16 @@ public class IntegrationTest {
 		JSONAssert.assertNotEquals("1", noOfExecutions, true);
 		System.out.println("1 off 3 integration completed");
 	}
-	
+
 	@Test @Order(2)
 	void getExecutionByIdIntegrationTest() throws JSONException {
-		
+
 		String expectedValue = "{\n" +
 				"    \"id\": 1,\n" +
-				"    \"executionID\": \"1000\",\n" +
-				"    \"testcaseName\": \"TC001\",\n" +
+				"    \"executionID\": \"10001\",\n" +
+				"    \"testcaseName\": \"Test Case Name 1001\",\n" +
 				"    \"executionStatus\": \"Pass\",\n" +
-				"    \"executionDate\": \"2022-03-24\"\n" +
+				"    \"executionDate\": \"05/05/2022\"\n" +
 				"}";
 		TestRestTemplate testRestTemplate = new TestRestTemplate();
 		ResponseEntity<String> response = testRestTemplate.getForEntity("http://54.173.4.42:8089/getExecution/1", String.class);
