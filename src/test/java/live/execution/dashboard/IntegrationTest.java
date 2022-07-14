@@ -25,7 +25,7 @@ public class IntegrationTest {
 	@Test @Order(1)
 	void getAllExecutionsIntegrationTest() throws JSONException {
 		TestRestTemplate testRestTemplate = new TestRestTemplate();
-		ResponseEntity<String> response = testRestTemplate.getForEntity("http://54.173.4.42:8089/getExecution", String.class);
+		ResponseEntity<String> response = testRestTemplate.getForEntity("http://44.205.0.190:8089/getExecution", String.class);
 		System.out.println(response.getStatusCode());
 		System.out.println(response.getBody());
 		String noOfExecutions = String.valueOf(response.getBody().length());
@@ -44,7 +44,7 @@ public class IntegrationTest {
 				"    \"executionDate\": \"05/05/2022\"\n" +
 				"}";
 		TestRestTemplate testRestTemplate = new TestRestTemplate();
-		ResponseEntity<String> response = testRestTemplate.getForEntity("http://54.173.4.42:8089/getExecution/1", String.class);
+		ResponseEntity<String> response = testRestTemplate.getForEntity("http://44.205.0.190:8089/getExecution/1", String.class);
 		System.out.println(response.getStatusCode());
 		System.out.println(response.getBody());
 		JSONAssert.assertEquals(expectedValue, response.getBody(), false);
@@ -67,7 +67,7 @@ public class IntegrationTest {
 		headers.setContentType(MediaType.APPLICATION_JSON);
 		
 		HttpEntity<Execution> request = new HttpEntity<Execution>(country, headers);
-		ResponseEntity<String> response = testRestTemplate.postForEntity("http://54.173.4.42:8089/addExecution", request, String.class);
+		ResponseEntity<String> response = testRestTemplate.postForEntity("http://44.205.0.190:8089/addExecution", request, String.class);
 		System.out.println(response.getStatusCode());
 		System.out.println(response.getBody());
 		System.out.println("3 off 3 integration completed");
